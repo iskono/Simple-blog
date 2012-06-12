@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rsync --delete --exclude="update-server.sh"  --exclude=".git" ./ /var/www/ -av
+rsync --delete --exclude="update-server.sh" --exclude=".*"  --exclude=".git" ./ /var/www/ -av
