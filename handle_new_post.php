@@ -22,8 +22,8 @@ if(!$successful)
 	</head>
 	<body>
 		<div class="content">
-			<p>Your post has not been submitted because that functionality hasn't been implemented yet.</p>
-			<p>Sorry :(</p>
+			<p>Your post was sumbitted succesfully.</p>
+			<p><a href="index.php">Return to home page</a></p>
 		</div>
 		<div id="side">
 			<ul>
