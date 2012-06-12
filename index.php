@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 
 <?php
+
+include_once "markdown/markdown.php";
+
 $db=new SQLite3("data.db");
 $result=$db->query("SELECT * FROM posts ORDER BY time DESC");
+
 ?>
 
 <html>
@@ -17,7 +21,7 @@ $result=$db->query("SELECT * FROM posts ORDER BY time DESC");
 			{
 				echo "<div class=\"content\">";
 				echo "<h1>".$row["title"]."</h1>\n";
-				echo "<p>".$row["content"]."</p>\n";
+				echo Markdown($row["content"]);
 				echo "</div>";
 			}
 		?>
