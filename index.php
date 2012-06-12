@@ -24,7 +24,8 @@ $result=$db->query("SELECT * FROM posts ORDER BY time DESC");
 		
 		<div id="side">
 			<ul>
-				<li> <a href="#1">one</a></li>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="insert.html">New post</a></li>
 			</ul>
 		</div>
 	</body>

@@ -46,6 +46,11 @@ a:active
 	text-decoration: italic;
 }
 
+textarea
+{
+	font-family:trebuchet;
+}
+
 .content
 {
 	position: static;
