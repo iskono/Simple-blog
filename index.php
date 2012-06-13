@@ -20,7 +20,7 @@ $result=$db->query("SELECT * FROM posts ORDER BY time DESC");
 			while($row=$result->fetchArray())
 			{
 				echo "<div class=\"content\">";
-				echo "<h1>".$row["title"]."</h1>\n";
+				echo "<a href=\"view_post.php?time=" . $row["time"] . "\"><h1>".$row["title"]."</h1></a>\n";
 				echo Markdown($row["content"]);
 				echo "</div>";
 			}
