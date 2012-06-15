@@ -24,7 +24,7 @@ if(!$successful)
 
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="test.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
 		<title>Post Submitted</title>
 	</head>
 	<body>
