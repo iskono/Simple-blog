@@ -2,6 +2,11 @@
 
 <?php
 
+
+if(hash("whirlpool", $_POST["password"])!="55effa4673892e8f3c2f21b122265b037e89227a80122c2b6b23c97cfa93d90e3c76388b86aa2990c07248b97533dd6cf5dd0e68aae889de3baae8dac034f52a") 
+{
+	die("invalid password");
+}
 $db=new SQLite3("data.db");
 $title=$_POST["title"];
 $content=$_POST["content"];
