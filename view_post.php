@@ -4,21 +4,21 @@
 
 include_once "markdown/markdown.php";
 
-if($_GET["time"]==NULL)
+if($_GET["id"]==NULL)
 {
-	die("No time passed\n");
+	die("No id passed\n");
 }
 
 $db=new SQLite3("data.db");
-$stmt=$db->prepare("SELECT * FROM posts WHERE time=:time");
-$stmt->bindValue(":time", $_GET["time"], SQLITE3_INTEGER);
+$stmt=$db->prepare("SELECT * FROM posts WHERE id=:id");
+$stmt->bindValue(":id", $_GET["id"], SQLITE3_INTEGER);
 
 $result=$stmt->execute();
 $post=$result->fetchArray(); //Should only return one result
 
 if(!$post)
 {
-	die($_GET["time"] . " does not appear to be a valid row reference");
+	die($_GET["id"] . " does not appear to be a valid row reference");
 }
 $title=$post["title"];
 $content=Markdown($post["content"]);
