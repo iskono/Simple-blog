@@ -25,7 +25,7 @@
 	</head>
 	<body>
 		<div class="content">
-			<p>This functionality is still being implemented.</p>
+			<p>Your new database has been created successfully, and an example post has been made in it.</p>
 		</div>
 		<div id="side">
 			<ul>
