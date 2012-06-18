@@ -11,7 +11,7 @@ $db=new SQLite3("data.db");
 $title=$_POST["title"];
 $content=$_POST["content"];
 
-$stmt=$db->prepare("INSERT INTO posts VALUES (:content, :title, strftime('%s', 'now'))");
+$stmt=$db->prepare("INSERT INTO posts VALUES (:content, :title, strftime('%s', 'now'), NULL)");
 
 $stmt->bindValue(":content", $content, SQLITE3_TEXT);
 $stmt->bindValue(":title", $title, SQLITE3_TEXT);
