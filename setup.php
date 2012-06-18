@@ -4,17 +4,17 @@
 	touch("data.db");
 
 	$db=new SQLite3("data.db");
-	$success=$db->exec("CREATE TABLE posts(content TEXT, title TEXT, time INTEGER);");
+	$success=$db->exec("CREATE TABLE posts(content TEXT, title TEXT, time INTEGER, id INTEGER PRIMARY KEY)");
 
 	if(!$success)
 	{
 		die("Failed to create database");
 	}
 
-	$success=$db->exec("INSERT INTO posts VALUES ('This is just an example post', 'Hello, World!', strftime('%s', 'now'))");
+	$success=$db->exec("INSERT INTO posts VALUES ('This is just an example post', 'Hello, World!', strftime('%s', 'now'), NULL)");
 	if(!$success)
 	{
-		die("Failed to make example post to database");
+		die("Failed to make example post to database: ". $db->lastErrorMsg());
 	}
 ?>
 
