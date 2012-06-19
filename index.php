@@ -22,6 +22,8 @@ $result=$db->query("SELECT * FROM posts ORDER BY time DESC");
 				echo "<div class=\"content\">";
 				echo "<a href=\"view_post.php?id=" . $row["id"] . "\"><h1>".$row["title"]."</h1></a>\n";
 				echo Markdown($row["content"]);
+				echo "<hr />";
+				echo "<a href='edit.php?id=".$row["id"]."'>Edit</a>\n";
 				echo "</div>";
 			}
 		?>
