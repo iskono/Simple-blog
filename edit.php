@@ -21,6 +21,7 @@ if(!$post)
 
 $title=$post["title"];
 $content=$post["content"]; //don't format post, we want it in it's raw format
+$id=$post["id"];
 
 ?>
 
@@ -36,7 +37,7 @@ $content=$post["content"]; //don't format post, we want it in it's raw format
 					echo "<h2>Post Title</h2> <input type='text' name='title' value='$title' />";
 					echo "<h2>Content:</h2>";
 					echo "<textarea name='content' rows=30 cols=145>$content</textarea>";
-					echo "<input type='hidden' name='id' value=$id />";
+					echo "<input type='hidden' name='id' value='$id' />";
 				?>
 				<input type="password" name="password" />
 				<input type="submit" value="Save!" />
